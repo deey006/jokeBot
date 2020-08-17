@@ -1,0 +1,87 @@
+/* ROBOT.GIF from Giphy - https://giphy.com/gifs/robot-cinema-4d-eyedesyn-3o7abtn7DuREEpsyWY */
+
+html {
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  background: #45badd;
+}
+.container{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url('./robot.gif');
+  background-size: contain;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+button{
+  margin-bottom: 10px;
+  cursor: pointer;
+  outline: none;
+  width: 230px;
+  height: 50px;
+  font-family: 'Barlow', sans-serif;
+  color: white;
+  font-size: 25px;
+  text-shadow: 0 2px 5px black;
+  background:linear-gradient(to top, #ff3482, #d30655);
+  border: 2px solid black;
+  border-radius: 7px;
+  /* for the 3D effect */
+  box-shadow:inset 0 20px 4px -19px rgba(63, 38, 38, 0.4), 0 12px 12px 0 rgba(0, 0, 0, 0.3);
+}
+button:hover{
+  filter: brightness(95%);
+  background:linear-gradient(to bottom, #696969, #575757);
+}
+/* illusion of button pressing in */
+button:active{
+  transform: translateY(3px);
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.3);
+}
+button.disable{
+  cursor: default;
+  filter: brightness(30%);
+}
+p{
+  max-width: 450px;
+  margin-left: 14rem;
+  color: whitesmoke;
+  font-size: 25px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 25px;
+  text-shadow: 0 2px 5px black;
+  background:linear-gradient(to top, #ff3482, #d30655);
+  border: 2px solid black;
+  border-radius: 7px;
+  /* for the 3D effect */
+  box-shadow:inset 0 20px 4px -19px rgba(63, 38, 38, 0.4), 0 12px 12px 0 rgba(0, 0, 0, 0.3);
+  padding: 10px 15px;
+}
+
+
+@media screen and (max-width: 100px){
+  .container{
+    background-size: cover;
+    background-position: center center;
+  }
+ 
+}
+@media screen and (max-width: 760px){
+  p{
+    max-width: 520px;
+    position: absolute;
+    top: 25rem;
+    margin: 0;
+  }
+  button{
+    width: 100%;
+    position: absolute;
+    top: 9rem;
+  }
+}
